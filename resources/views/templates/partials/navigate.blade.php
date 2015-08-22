@@ -35,7 +35,11 @@
         <button type="submit" class="btn btn-default">Submit</button>
       </form>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="auth/login">Login</a></li>
+        @if(Auth::check())
+          <li><a href="{{route('logout')}}">Logout</a></li>
+          @else
+          <li><a href="{{route('usersite')}}">Login</a></li>
+          @endif
       </ul>
     </div>
   </div>
