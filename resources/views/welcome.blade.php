@@ -1,21 +1,35 @@
 @extends('templates.main')
-@section('title'){{'Hello'}}@endsection
 @section('content')
-<div class="row-fluid">
-  <div class="content">
-    @include('templates.partials.header')
-    <div class="jumbotron">
-          <h2>Hello</h2>
-    </div>
-    <div class="">
+@include('templates.partials.header')
+@include('templates.partials.navigate')
+<section>
+
+  <div class="row-fluid">
+    <div class="container">
+        <div class="col-md-2">
+
+        </div>
+        <div class="col-md-8">
+          <div class="" align="center">
+              @foreach($series as $s)
+                <img src="{{$s->photo}}" alt="serie_photo" class="img-responsive img-thumbnail"/>
+                <h1>{{$s->serie}}</h1>
+                <p>
+                  Actors: {{$s->main_actors}} / Extras: {{$s->actors}} / Genre: {{$s->genre}}
+                </p>
+                <p>
+                  {{$s->description}}
+                </p>
+                <div align='center'><a href="series/{{$s->slug}}" class="btn btn-info">Leer más....</a></div>
+                <br>
+              @endforeach
+          </div>
+        </div>
+    <div class="col-md-2">
 
     </div>
-    <div class="">
-
     </div>
   </div>
-</div>
-@endsection
-@section('footer')
+</section>
 @include('templates.partials.footer')
 @stop

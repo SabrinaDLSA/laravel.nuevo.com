@@ -1,13 +1,12 @@
 <header>
-  <div class="">
-    <div class="GoogleFonts">
-          Prueba de Mi Primer Blog En Laravel
-    </div>
-    <div >
-          Articles about, well lots of things.....
-    </div>
-    <div align='center' class="Nunito">
-          <a>Leer Blog</a>
+  <div class="row-fluid">
+    <div class="container">
+      <div class="GoogleFonts" id="title">
+          Series.com
+      </div>
+      <div class="GoogleFonts" id="subtitle">
+          by Sabrina
+      </div>
     </div>
   </div>
 </header>
