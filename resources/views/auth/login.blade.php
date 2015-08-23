@@ -7,7 +7,7 @@
   <div class="container">
     <div class="col-md-4"></div>
     <div class="col-md-4">
-      <form class="form-horizontal" method="POST" action="/auth/login">
+      <form class="form-horizontal" method="POST" action="{{route('login')}}">
         {!! csrf_field() !!}
         <fieldset>
           <legend>Login</legend>

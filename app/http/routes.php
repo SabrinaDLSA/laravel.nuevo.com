@@ -13,7 +13,7 @@ Route::get('/',[
       'as'=> 'usersite',
       'uses' => 'UserController@usersite'
       ]);
-      Route::get('desktop',[
+      Route::get('/desktop',[
         'as'=> 'desktop',
         'uses' => 'UserController@index'
         ]);
@@ -21,13 +21,11 @@ Route::get('/series/{slug}', 'SeriesController@index');
 
 
 // Authentication routes...
-Route::get('auth/login',[
+Route::get('login',[
   'as' => 'login',
   'uses' =>  'Auth\AuthController@getLogin']);
-Route::post('auth/login',[
-  'as' => 'login',
-  'uses' =>  'Auth\AuthController@postLogin']);
-Route::get('auth/logout',[
+Route::post('login','Auth\AuthController@postLogin');
+Route::get('logout',[
   'as' => 'logout',
   'uses' => 'Auth\AuthController@getLogout']);
 
