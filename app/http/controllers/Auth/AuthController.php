@@ -67,4 +67,9 @@ class AuthController extends Controller
     {
         return route('login');
     }
+
+    public function redirectPath()
+    {
+        return route('desktop');
+    }
 }
