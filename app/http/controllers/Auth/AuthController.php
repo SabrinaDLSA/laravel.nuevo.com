@@ -74,5 +74,8 @@ class AuthController extends Controller
     {
         return route('desktop');
     }
+<<<<<<< HEAD
+>>>>>>> 0b5dc5d... Ultima version con desktop
+=======
 >>>>>>> 0b5dc5d... Ultima version con desktop
 }
