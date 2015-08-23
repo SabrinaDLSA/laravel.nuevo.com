@@ -1,22 +1,10 @@
 <?php
-
-/*
-|--------------------------------------------------------------------------
-| Application Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register all of the routes for an application.
-| It's a breeze. Simply tell Laravel the URIs it should respond to
-| and give it the controller to call when that URI is requested.
-|
-*/
-
 Route::get('/',[
   'as' => 'home',
   'uses' => 'WelcomeController@index'
   ]);
   Route::get('/home','WelcomeController@index');
-  
+
   Route::get('/logout', [
       'as' => 'logout',
       'uses' => 'UserController@logout'
@@ -25,6 +13,10 @@ Route::get('/',[
       'as'=> 'usersite',
       'uses' => 'UserController@usersite'
       ]);
+      Route::get('desktop',[
+        'as'=> 'desktop',
+        'uses' => 'UserController@index'
+        ]);
 Route::get('/series/{slug}', 'SeriesController@index');
 
 
@@ -45,7 +37,7 @@ Route::get('auth/register', [
   'uses' => 'Auth\AuthController@getRegister'
   ]);
 Route::post('auth/register', [
-'as' => 'registerin',
+'as' => 'register',
 'uses' => 'Auth\AuthController@postRegister'
 ]);
 // Password reset link request routes...

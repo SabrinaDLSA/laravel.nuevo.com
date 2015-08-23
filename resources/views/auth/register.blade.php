@@ -12,7 +12,7 @@
       </div>
     </div>
     <div class="col-md-4">
-      <form class="form-horizontal" method="POST" action="/auth/register">
+      <form class="form-horizontal" method="POST" action="auth/register">
       {!! csrf_field() !!}
       <fieldset>
         <legend>Legend</legend>
@@ -20,6 +20,12 @@
           <label for="inputEmail" class="col-lg-2 control-label">Email</label>
           <div class="col-lg-10">
             <input type="email" name="email" class="form-control" id="inputEmail" placeholder="Email">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputUsername" class="col-lg-2 control-label">Username</label>
+          <div class="col-lg-10">
+            <input type="text" name="username" class="form-control" id="inputUsername" placeholder="Username">
           </div>
         </div>
         <div class="form-group">

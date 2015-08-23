@@ -5,9 +5,7 @@
 @include('templates.partials.navigate')
 <div class="row-fluid">
   <div class="container">
-    <div class="col-md-4">
-
-    </div>
+    <div class="col-md-4"></div>
     <div class="col-md-4">
       <form class="form-horizontal" method="POST" action="/auth/login">
         {!! csrf_field() !!}
@@ -37,7 +35,7 @@
           </div>
           <div class="form-group">
             <div class="col-lg-10 col-lg-offset-2">
-              <a href="register">Wanna create an account?</a>
+              <a href="{{route('register')}}">Wanna create an account?</a>
               <br>
               <a href="#">Lost your password?</a>
             </div>
