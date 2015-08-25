@@ -30,18 +30,15 @@
                 {{$serie->description}}
             </p>
           </div>
-    <div class="col-md-2">
-        <table>
-          <legend>{{$serie->serie}}</legend>
-          <tbody>
-            <th>Main Actors</th>
-            <th>Actors</th>
-            <th>Director</th>
-            <th>Genre</th>
-            <th>Start Date</th>
-            <th>Finish Da</th>
-          </tbody>
-        </table>
+          <div class="col-md-2">
+            <table>
+              <legend>{{$serie->serie}}</legend>
+              <tbody>
+                @foreach($serie as $s)
+                  
+                @endforeach
+              </tbody>
+            </table>
       </div>
   </div>
 </div>
