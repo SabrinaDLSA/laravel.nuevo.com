@@ -17,7 +17,8 @@ class CreateSeriesTable extends Migration
           $table->string('serie');
           $table->string('main_actors');
           $table->string('actors');
-          $table->string('genre');
+          $table->enum('genre', ['Action', 'Drama', 'Terror', 'Romantic',
+          'Musical', 'Adventure', 'Others']);
           $table->string('photo');
           $table->date('start');
           $table->date('finish');

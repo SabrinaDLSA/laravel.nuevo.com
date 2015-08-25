@@ -16,6 +16,7 @@ class DatabaseSeeder extends Seeder
 
         $this->call(SeriesTableSeeder::class);
 
+        #factory(nuevo\User::class, 9)->create();
         Model::reguard();
     }
 }

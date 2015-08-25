@@ -16,7 +16,7 @@
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Series <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
-            <li><a href="#">Action</a></li>
+            <li><a href="{{route('genre')}}">Action</a></li>
             <li><a href="#">Drama</a></li>
             <li><a href="#">Terror</a></li>
             <li><a href="#">Romantic</a></li>
@@ -34,8 +34,8 @@
         </div>
         <button type="submit" class="btn btn-default">Submit</button>
       </form>
-      <ul class="nav navbar-nav navbar-right">
-        @if(Auth::check())
+      <ul class="nav navbar-nav navbar-right" >
+          @if(Auth::check())
           <li><a href="{{route('logout')}}">Logout</a></li>
           @else
             <li><a href="{{route('login')}}">Login</a></li>

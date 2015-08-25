@@ -18,7 +18,9 @@ Route::get('/',[
         'uses' => 'UserController@index'
         ]);
 Route::get('/series/{slug}', 'SeriesController@index');
-
+Route::get('/genre', [
+  'as'   => 'genre',
+  'uses' => 'SeriesController@genre']);
 
 // Authentication routes...
 Route::get('login',[

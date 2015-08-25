@@ -19,14 +19,13 @@
                 <p>
                   Actors: {{$s->main_actors}} / Extras: {{$s->actors}} / Genre: {{$s->genre}}
                 </p>
-                <div class='Nunito'><p class='Nunito'>{!! substr( $s->description , 0, 250). '...' !!}</p>
-                <div class="" align='center'><a href="series/{{$s->slug}}" class="white btn btn-info">Leer más....</a></div>
+                <p>
+                  {{$s->description}}
+                </p>
+                <div align='center'><a href="series/{{$s->slug}}" class="btn btn-info">Leer más....</a></div>
                 <br>
               @endforeach
           </div>
-          <div align="center">
-                  {!! $series->render() !!}
-                </div>
         </div>
     <div class="col-md-2">
 

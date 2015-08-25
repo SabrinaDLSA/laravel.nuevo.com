@@ -26,9 +26,11 @@ class SeriesController extends Controller
      *
      * @return Response
      */
-    public function create()
+    public function genre()
     {
-        //
+      $serie = Serie::findBySlug($slug);
+      return view('serie')
+      ->with('serie', $serie);
     }
 
     /**

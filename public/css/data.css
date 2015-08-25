@@ -1,14 +1,26 @@
 /*Importando Fuentes desde Google Fonts*/
 @import url(http://fonts.googleapis.com/css?family=Pacifico);
 @import url(http://fonts.googleapis.com/css?family=Nunito);
-
+@import url(https://fonts.googleapis.com/css?family=Great+Vibes);
+.Great{
+  font-family: 'Great Vibes', cursive;
+}
 .GoogleFonts{
   font-family: 'Pacifico', cursive;
 }
 .Nunito{
   font-family: 'Nunito', sans-serif;
 }
-
+.blue{
+  color: #3078CA;
+}
+.bluewhite{
+  color: #6DB4FC;
+}
+.white{
+  text-decoration-color: white;
+  color: white;
+}
 section{
   height: auto;
   padding-top: 65px;
@@ -30,17 +42,46 @@ background-size: cover;
 background-position: center;
 background-attachment:fixed;
 }
-
-#title
-{
+.secHeader{
+background-image: url('https://images.unsplash.com/photo-1429030150151-548690082f0b?q=80&fm=jpg&s=e9afe345acd4cd6e5e602c909f17b342');
+min-height: 50vh;
+background-size: cover;
+background-position: center;
+background-attachment:fixed;
+}
+.sub{
+  background-size: cover;
+  min-height: 60vh;
+}
+.ceroPadd{
+  padding-top: 0;
+  margin-top: 0;
+}
+.bord{
+  border-top: solid #236CBF 5px;
+}
+.btn-info{
+  border-color: #236CBF;
+  background-color: #63A1E9;
+}
+.btn-info:hover{
+  border-color: #236CBF;
+  background-color: #2864A9;
+}
+#title{
   color: #325075;
   font-size: 6em;
   text-align: center;
   padding-top: 3%;
 }
-
-#subtitle
-{
+#letra{
+  color: #2F90C1;
+  font-size: 1.1em;
+  padding-top: 1%;
+  margin-right: 0;
+  padding-right: 0;
+}
+#subtitle{
   color: #345481;
   font-size: 3em;
   text-align: center;

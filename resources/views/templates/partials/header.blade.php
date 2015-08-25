@@ -5,7 +5,7 @@
           Series.com
       </div>
       <div class="GoogleFonts" id="subtitle">
-          by Sabrina
+          by Sabrina <br>
       </div>
     </div>
   </div>
