@@ -9,9 +9,9 @@ Route::get('/',[
       'as' => 'logout',
       'uses' => 'UserController@logout'
     ]);
-    Route::get('usersite',[
-      'as'=> 'usersite',
-      'uses' => 'UserController@usersite'
+    Route::get('desktop',[
+      'as'=> 'desktop',
+      'uses' => 'UserController@desktop'
       ]);
       Route::get('/desktop',[
         'as'=> 'desktop',
