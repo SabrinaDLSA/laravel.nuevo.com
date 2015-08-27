@@ -12,7 +12,7 @@
       </div>
     </div>
     <div class="col-md-4">
-      <form class="form-horizontal" method="POST" action="auth/register">
+      <form class="form-horizontal" method="POST" action="{{route('register')}}">
       {!! csrf_field() !!}
       <fieldset>
         <legend>Legend</legend>

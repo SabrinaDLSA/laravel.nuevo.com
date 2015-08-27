@@ -38,7 +38,7 @@
         @if(Auth::check())
           <li><a href="{{route('logout')}}">Logout</a></li>
           @else
-          <li><a href="{{route('usersite')}}">Login</a></li>
+            <li><a href="{{route('login')}}">Login</a></li>
           @endif
       </ul>
     </div>

@@ -32,11 +32,14 @@ Route::get('auth/logout',[
   'uses' => 'Auth\AuthController@getLogout']);
 
 // Registration routes...
-Route::get('register', [
+Route::get('auth/register', [
   'as' => 'register',
   'uses' => 'Auth\AuthController@getRegister'
   ]);
-Route::post('register', 'Auth\AuthController@postRegister');
+Route::post('auth/register', [
+'as' => 'register',
+'uses' => 'Auth\AuthController@postRegister'
+]);
 // Password reset link request routes...
 Route::get('password/email', 'Auth\PasswordController@getEmail');
 Route::post('password/email', 'Auth\PasswordController@postEmail');
