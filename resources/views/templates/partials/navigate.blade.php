@@ -36,11 +36,11 @@
       </form>
         @if(Auth::check())
         <ul class="nav navbar-nav navbar-right">
+        <li><a href="{{route('logout')}}">Logout</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
         <li><a href="{{route('profile')}}">Profile</a></li>
         </ul>
-          <ul class="nav navbar-nav navbar-right">
-          <li><a href="{{route('logout')}}">Logout</a></li>
-          </ul>
           @else
             <ul class="nav navbar-nav navbar-right">
             <li><a href="{{route('login')}}">Login</a></li>
