@@ -14,15 +14,8 @@ class CreateSeriesTable extends Migration
   {
       Schema::create('series', function (Blueprint $table) {
           $table->increments('id');
-          $table->string('serie');
-          $table->string('main_actors');
-          $table->string('actors');
-          $table->string('genre');
-          $table->string('photo');
-          $table->date('start');
-          $table->date('finish');
-          $table->text('description');
-          $table->string('director');
+          $table->string('Name');
+          $table->string('Photo');
           $table->timestamps();
       });
   }

@@ -26,7 +26,7 @@ class Serie extends Model implements SluggableInterface
    *
    * @var array
    */
-  protected $fillable = ['serie', 'main_actors', 'actors','genre', 'photo', 'description', 'director'];
+  protected $fillable = ['Name', 'Photo'];
 
   /**
    * The attributes excluded from the model's JSON form.
@@ -34,4 +34,11 @@ class Serie extends Model implements SluggableInterface
    * @var array
    */
   protected $hidden = [];
+  /**
+     * Get the phone record associated with the user.
+     */
+    public function Series_infos()
+    {
+        return $this->hasOne('nuevo\Series_info');
+    }
 }

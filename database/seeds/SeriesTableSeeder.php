@@ -9,28 +9,14 @@ class SeriesTableSeeder extends Seeder{
   public function run(){
     Serie::create(
     [
-      'serie'=>'Pretty Little Liars',
-      'main_actors' => 'Shay M, Lucy H, Ashley B',
-      'actors' => 'none',
-      'genre' => 'Drama',
-      'photo' => 'https://images.unsplash.com/photo-1437240443155-612416af4d5a?fit=crop&fm=jpg&q=80&w=1050',
-      'start' => '20-10-2009',
-      'finish' => '00-00-00',
-      'description' => 'Great serie',
-      'director' => 'Shonda'
-    ]);
+      'Name'=>'Pretty Little Liars',
+      'Photo'=> 'https://images.unsplash.com/photo-1436831135709-48bdc150cce5?q=80&fm=jpg&s=3e7350350dd27f7d9b67256fd90073f5'
+      ]);
 
   Serie::create(
   [
-    'serie'=>'Xena Warrior Princess',
-    'main_actors' => 'Lucy Lawless, Renee O Connor',
-    'actors' => 'Sam Raimi',
-    'genre' => 'Adventure',
-    'photo' => 'https://images.unsplash.com/photo-1436891678271-9c672565d8f6?fit=crop&fm=jpg&q=80&w=1050',
-    'start' => '20-1-1995',
-    'finish' => '20-1-2001',
-    'description' => 'Great serie',
-    'director' => 'Ted'
+    'Name'=>'Xena Warrior Princess',
+    'Photo' => 'https://images.unsplash.com/photo-1437075130536-230e17c888b5?q=80&fm=jpg&s=9b73917f45dd1bed866904833e297478'
     ]);
   }
 }
