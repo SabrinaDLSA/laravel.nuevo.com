@@ -1,5 +1,5 @@
 @extends('templates.main')
-@section('title'){{$serie->Name}}@endsection
+@section('title'){{''}}@endsection
 @section('content')
 @include('templates.partials.header')
 @include('templates.partials.navigate')
@@ -7,10 +7,10 @@
   <div class="container">
     <div class="col-md-8">
       <div class="" align="center">
-        <h1>{{$serie->Name}}</h1>
+        <h1>{{''}}</h1>
       </div>
       <div class="img-responsive" >
-        <img class="img-responsive img-thumbnail" src="{{$serie->Photo}}" alt="" />
+        <img class="img-responsive img-thumbnail" src="{{''}}" alt="" />
       </div>
     </div>
     <div class="col-md-4">
@@ -21,7 +21,7 @@
     <div class="col-md-8">
       <div class="" align="center">
         <br>
-          <h3>{{$serie->Name}}</h3>
+          <h3>{{''}}</h3>
         <hr>
         <br>
       </div>
@@ -32,12 +32,12 @@
         <table class="table table-striped table-hover ">
           <thead>
             <div class="" align="center">
-              <h3>{{$serie->Name}}</h3>
+              <h3>{{''}}</h3>
             </div>
           </thead>
           <tbody>
             @foreach($columns as $c)
-            @if($c == 'id' || $c == 'description' || $c == 'photo' || $c == 'slug' || $c == 'serie')
+            @if($c == 'id' || $c == 'Photo' || $c == 'slug')
             @else
             <tr class="active">
                 <td>{{$c}}</td>
