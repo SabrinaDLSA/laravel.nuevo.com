@@ -16,7 +16,8 @@ class SeriesController extends Controller
      */
     public function index($slug)
     {
-      $serie = Serie::findBySlug($slug);
+      //$serie = nuevo\Serie::find(1);
+      $serie = Serie::findBySlug($slug)->get();
       return view('serie')
       ->with('serie', $serie);
     }

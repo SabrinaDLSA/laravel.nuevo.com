@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
-
+use Illuminate\Database\Eloquent\Model;
 class CreateSeriesInfosTable extends Migration
 {
     /**
@@ -18,7 +18,13 @@ class CreateSeriesInfosTable extends Migration
             $table->date('Start');
             $table->date('Finish');
             $table->text('Description');
+            $table->integer('serie_id');
             $table->timestamps();
+
+            $table
+                  ->foreign('serie_id')
+                  ->references('id')
+                  ->on('series');
 });
 }
     /**

@@ -1,5 +1,5 @@
 @extends('templates.main')
-@section('title'){{$serie->serie}}@endsection
+@section('title'){{$serie->Name}}@endsection
 @section('content')
 @include('templates.partials.header')
 @include('templates.partials.navigate')
@@ -7,10 +7,10 @@
   <div class="container">
     <div class="col-md-8">
       <div class="" align="center">
-        <h1>{{$serie->serie}}</h1>
+        <h1>{{$serie->Name}}</h1>
       </div>
       <div class="img-responsive" >
-        <img class="img-responsive img-thumbnail" src="{{$serie->photo}}" alt="" />
+        <img class="img-responsive img-thumbnail" src="{{$serie->Photo}}" alt="" />
       </div>
     </div>
     <div class="col-md-4">
@@ -21,12 +21,9 @@
     <div class="col-md-8">
       <div class="" align="center">
         <br>
-          <h3>{{$serie->serie}}</h3>
+          <h3>{{$serie->Name}}</h3>
         <hr>
         <br>
-        <p class="Nunito">
-          {{$serie->description}}
-        </p>
       </div>
     </div>
     <div class="col-md-4">
@@ -35,7 +32,7 @@
         <table class="table table-striped table-hover ">
           <thead>
             <div class="" align="center">
-              <h3>{{$serie->serie}}</h3>
+              <h3>{{$serie->Name}}</h3>
             </div>
           </thead>
           <tbody>
