@@ -65,3 +65,7 @@ background-color: #467CE8;
 #navi{
   padding-top:0;
 }
+.muestra_cuadrada{
+  max-width: 210px;
+  float: left;
+}
