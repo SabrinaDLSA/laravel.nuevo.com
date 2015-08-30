@@ -1,9 +1,10 @@
 <?php
 
 namespace nuevo\Http\Controllers;
-
+use nuevo\Serie;
+use nuevo\Series_info;
 use Illuminate\Http\Request;
-
+use DB;
 use nuevo\Http\Requests;
 use nuevo\Http\Controllers\Controller;
 
@@ -16,7 +17,7 @@ class AdminController extends Controller
      */
     public function index()
     {
-        //
+        return view('desktop');
     }
 
     /**
@@ -24,9 +25,11 @@ class AdminController extends Controller
      *
      * @return Response
      */
-    public function create()
+    public function series()
     {
-        //
+      $series = DB::table('series')
+      ->join('series_infos', 'series.id', '=', 'series_infos.serie_id')->paginate(5);
+        return view('desktop')->with('series', $series);
     }
 
     /**
@@ -35,7 +38,7 @@ class AdminController extends Controller
      * @param  Request  $request
      * @return Response
      */
-    public function store(Request $request)
+    public function comics(Request $request)
     {
         //
     }
@@ -46,42 +49,35 @@ class AdminController extends Controller
      * @param  int  $id
      * @return Response
      */
-    public function show($id)
+    public function music($id)
     {
         //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return Response
-     */
     public function edit($id)
     {
-        //
+      $serie = DB::table('series')->where('series.id', $id)
+      ->join('series_infos', 'series.id', '=', 'series_infos.serie_id')->first();
+        return view('edit')->with('serie', $serie);
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  Request  $request
-     * @param  int  $id
-     * @return Response
-     */
-    public function update(Request $request, $id)
+    public function delete($id)
     {
-        //
+        $serie = Serie::find($id);
+        return view('edit')->with('serie', $serie);
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return Response
-     */
-    public function destroy($id)
-    {
-        //
+    public function refresh($id){
+        $p = Serie::find($id);
+        $p->Name = \Input::get('Name');
+        $p->Photo = \Input::get('Photo');
+        $p->resluggify();
+        $p->save();
+        $p = Series_info::find($id);
+        $p->Description = \Input::get('Description');
+        $p->Genre = \Input::get('Genre');
+        $p->Start = \Input::get('Start');
+        $p->Finish = \Input::get('Finish');
+        return \Redirect::route('profile');
     }
 }

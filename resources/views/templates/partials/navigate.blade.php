@@ -7,8 +7,12 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
+      @if(\Auth::check())
+      <a class="navbar-brand" href="{{route('home')}}">{{\Auth::user()->username}}</a>
+      @else
       <a class="navbar-brand" href="{{route('home')}}">Series.com</a>
-    </div>
+      @endif
+  </div>
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
       <ul class="nav navbar-nav">

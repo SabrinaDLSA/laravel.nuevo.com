@@ -3,20 +3,41 @@ Route::get('/',[
   'as' => 'home',
   'uses' => 'WelcomeController@index'
   ]);
-  Route::get('/home','WelcomeController@index');
+Route::get('/home','WelcomeController@index');
 
-  Route::get('/logout', [
-      'as' => 'logout',
-      'uses' => 'UserController@logout'
-    ]);
-    Route::get('profile',[
-      'as'=> 'profile',
-      'uses' => 'UserController@profile'
-      ]);
-      Route::get('/desktop',[
-        'as'=> 'desktop',
-        'uses' => 'UserController@index'
-        ]);
+// Admin Controllers
+Route::get('/comics',[
+    'as'=> 'comics',
+    'uses' => 'AdminController@comics'
+]);
+Route::get('/series',[
+    'as'=> 'series',
+    'uses' => 'AdminController@series'
+]);
+Route::get('/music',[
+    'as'=> 'music',
+    'uses' => 'AdminController@music'
+]);
+
+Route::get('series/{id}/edit','AdminController@edit' );
+Route::get('series/{id}/delete','AdminController@delete' );
+Route::post('series/{id}/refresh', 'AdminController@refresh');
+// User Controllers
+
+Route::get('/logout', [
+  'as' => 'logout',
+  'uses' => 'UserController@logout'
+]);
+Route::get('profile',[
+  'as'=> 'profile',
+  'uses' => 'UserController@profile'
+]);
+Route::get('/desktop',[
+  'as'=> 'desktop',
+  'uses' => 'UserController@index'
+]);
+
+//Series Controllers
 Route::get('/series/{slug}', 'SeriesController@index');
 
 

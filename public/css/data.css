@@ -43,6 +43,18 @@ background-position: center;
 background-attachment:fixed;
 background-color: #467CE8;
 }
+
+.btn-web{
+
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+  cursor: pointer;
+}
+
+.btn-group-justified{
+  max-width: 120px;
+}
 #title
 {
   color: #325075;
@@ -69,4 +81,10 @@ background-color: #467CE8;
   max-width: 210px;
   margin: 0.5%;
   float: left;
+}
+th{
+  width: 10%;
+}
+.lineaBordeada{
+  border-top: 3px solid #2D43D9;
 }

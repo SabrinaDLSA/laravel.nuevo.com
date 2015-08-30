@@ -1,7 +1,7 @@
 @extends('templates.main')
 @section('content')
 @include('templates.partials.header')
-@include('templates.partials.navigate')
+@include('templates.partials.log-nav')
 <section>
   <div class="row-fluid">
     <div class="container">
