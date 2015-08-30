@@ -13,6 +13,7 @@ class CreateSeriesTable extends Migration
   public function up()
   {
       Schema::create('series', function (Blueprint $table) {
+          $table->engine = 'InnoDB';
           $table->increments('id');
           $table->string('Name');
           $table->string('Photo');

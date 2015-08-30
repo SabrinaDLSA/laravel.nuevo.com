@@ -3,7 +3,7 @@
 namespace nuevo\Http\Controllers;
 use nuevo\Serie;
 use Illuminate\Http\Request;
-
+use DB;
 use nuevo\Http\Requests;
 use nuevo\Http\Controllers\Controller;
 
@@ -16,7 +16,8 @@ class SeriesController extends Controller
      */
     public function index($slug)
     {
-      $serie = Serie::findBySlug($slug);
+      $serie = DB::table('series')->where('slug', $slug)
+      ->join('series_infos', 'series.id', '=', 'series_infos.serie_id')->get();
       return view('serie')
       ->with('serie', $serie);
     }

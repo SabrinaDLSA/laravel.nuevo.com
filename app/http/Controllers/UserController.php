@@ -19,9 +19,9 @@ class UserController extends Controller
     {
         return view('desktop');
     }
-    public function usersite()
+    public function profile()
     {
-        //
+        return view('profile');
     }
 
   public function logout()

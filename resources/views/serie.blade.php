@@ -21,30 +21,30 @@
     <div class="col-md-8">
       <div class="" align="center">
         <br>
-          <h3>{{''}}</h3>
+        @foreach($serie as $s)
+        <h3>{{$s->Name}}</h3>
         <hr>
+        <p>{{$s->Description}}</p>
+        @endforeach
         <br>
       </div>
     </div>
-    <div class="col-md-4">
+    <div class="col-md-2">
       <div class="" align="center">
-        <?php $columns = Schema::getColumnListing('series')?>
         <table class="table table-striped table-hover ">
           <thead>
             <div class="" align="center">
-              <h3>{{''}}</h3>
             </div>
           </thead>
           <tbody>
-            @foreach($columns as $c)
-            @if($c == 'id' || $c == 'Photo' || $c == 'slug')
-            @else
             <tr class="active">
-                <td>{{$c}}</td>
-                <td>{{$serie->$c}}</td>
+              @foreach($serie as $s)
+              <td><legend>Name:</legend>{{$s->Name}}</td>
+              <td><legend>Genre:</legend>{{$s->Genre}}</td>
+              <td><legend>Start:</legend>{{$s->Start}}</td>
+              <td><legend>Finish:</legend>{{$s->Finish}}</td>
+              @endforeach
             </tr>
-            @endif
-            @endforeach
           </tbody>
       </table>
       </div>

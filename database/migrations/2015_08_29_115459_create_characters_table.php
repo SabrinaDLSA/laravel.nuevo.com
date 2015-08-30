@@ -17,7 +17,7 @@ class CreateCharactersTable extends Migration
             $table->string('Name');
             $table->string('Status');
             $table->integer('Age');
-            $table->integer('id_actor');
+            $table->integer('id_actor')->unsigned();
             $table->text('Descripion');
             $table->timestamps();
 

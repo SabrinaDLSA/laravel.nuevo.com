@@ -10,13 +10,19 @@ class SeriesTableSeeder extends Seeder{
     Serie::create(
     [
       'Name'=>'Pretty Little Liars',
-      'Photo'=> 'https://images.unsplash.com/photo-1436831135709-48bdc150cce5?q=80&fm=jpg&s=3e7350350dd27f7d9b67256fd90073f5'
+      'Photo'=> 'http://cdn.theatlantic.com/assets/media/img/posts/2014/01/Pretty_Little_Liars/c819ce319.jpg'
       ]);
 
   Serie::create(
   [
     'Name'=>'Xena Warrior Princess',
-    'Photo' => 'https://images.unsplash.com/photo-1437075130536-230e17c888b5?q=80&fm=jpg&s=9b73917f45dd1bed866904833e297478'
+    'Photo' => 'http://i1.wp.com/www.fiz-x.com/wp-content/uploads/2015/08/Xena-redemption.jpg?resize=620%2C412'
     ]);
+
+    Serie::create(
+    [
+      'Name'=>'Orphan Black',
+      'Photo' => 'http://www.serielizados.com/wp-content/uploads/orphan-black-tatiana-maslany-clones-sarah-alison-cosima-helena-rachel.jpg'
+      ]);
   }
 }

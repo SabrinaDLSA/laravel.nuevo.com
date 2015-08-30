@@ -15,8 +15,8 @@ class CreateActorCharactersTable extends Migration
         Schema::create('actor_characters', function (Blueprint $table) {
             $table->increments('id');
 
-            $table->integer('id_character');
-            $table->integer('id_actor');
+            $table->integer('id_character')->unsigned();
+            $table->integer('id_actor')->unsigned();
             $table->timestamps();
 
             $table

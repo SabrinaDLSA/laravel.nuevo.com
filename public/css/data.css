@@ -48,7 +48,7 @@ background-color: #467CE8;
   color: #325075;
   font-size: 6em;
   text-align: center;
-  padding-top: 3%;
+  padding-top: 1%;
 }
 
 #subtitle
@@ -56,7 +56,7 @@ background-color: #467CE8;
   color: #345481;
   font-size: 3em;
   text-align: center;
-  padding-top: 3%;
+  padding-top: 1%;
 }
 .hide{
   display:none;
@@ -67,5 +67,6 @@ background-color: #467CE8;
 }
 .muestra_cuadrada{
   max-width: 210px;
+  margin: 0.5%;
   float: left;
 }

@@ -13,12 +13,14 @@ class CreateSeriesInfosTable extends Migration
     public function up()
     {
         Schema::create('series_infos', function (Blueprint $table) {
+            $table->engine = 'InnoDB';
             $table->increments('id');
             $table->string('Genre');
             $table->date('Start');
             $table->date('Finish');
             $table->text('Description');
-            $table->integer('serie_id');
+            $table->integer('Seasons');
+            $table->integer('serie_id')->unsigned();
             $table->timestamps();
 
             $table

@@ -15,8 +15,8 @@ class CreateSeriesCharactersTable extends Migration
         Schema::create('series_characters', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
-            $table->integer('id_character');
-            $table->integer('id_serie');
+            $table->integer('id_character')->unsigned();
+            $table->integer('id_serie')->unsigned();
 
             $table
                   ->foreign('id_serie')
