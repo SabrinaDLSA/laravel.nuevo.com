@@ -4,6 +4,7 @@ namespace nuevo\Http\Controllers;
 use nuevo\Serie;
 use Illuminate\Http\Request;
 use DB;
+use nuevo\Series_info;
 use nuevo\Http\Requests;
 use nuevo\Http\Controllers\Controller;
 

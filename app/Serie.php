@@ -11,7 +11,7 @@ class Serie extends Model implements SluggableInterface
   use SluggableTrait;
 
    protected $sluggable = [
-       'build_from' => 'serie',
+       'build_from' => 'Name',
        'save_to'    => 'slug',
    ];
   /**

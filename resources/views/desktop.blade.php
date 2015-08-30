@@ -2,7 +2,7 @@
 @section('title'){{\Auth::user()->username}}@endsection
 @section('content')
 @include('templates.partials.header')
-@include('templates.partials.navigate')
+@include('templates.partials.log-nav')
 <div class="row-fluid">
   <div class="container">
     <div class="col-md-2">
