@@ -8,7 +8,19 @@
 .Nunito{
   font-family: 'Nunito', sans-serif;
 }
+.black{
+  color: black;
+}
+.blueF{
+  color: #3955BB;
+}
+.white{
+  color: white;
+}
 
+.lista{
+  list-style-type:none;
+}
 section{
   height: auto;
   padding-top: 65px;
@@ -16,13 +28,13 @@ section{
 
 footer{
   background-color: #3381BF;
-  max-height: 200px;
+  max-height: 220px;
   border-top: 4px solid #2D43D9;
 }
 .active{
   background-color: #345481;
 }
-.btn{
+.btnAzul{
   background-color: #3381BF;
   border: 1px solid #355EB0;
 }
@@ -52,9 +64,6 @@ background-color: #467CE8;
   cursor: pointer;
 }
 
-.btn-group-justified{
-  max-width: 120px;
-}
 #title
 {
   color: #325075;

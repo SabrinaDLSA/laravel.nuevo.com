@@ -8,6 +8,12 @@
           <div class="col-md-2">
           </div>
           <div class="col-md-8">
+            @if(\Session::has('alert'))
+          <div class="alert alert-dismissible alert-warning">
+              <button type="button" class="close" data-dismiss="alert">×</button>
+              <strong>{{ Session::get('alert') }}</strong>
+          </div>
+      @endif
             {!! Form::open (['url' => 'series/'.$serie->id.'/refresh'])!!}
       <fieldset>
         <legend align="center">Editing {{$serie->Name}}</legend>

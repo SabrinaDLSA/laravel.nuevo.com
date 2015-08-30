@@ -56,6 +56,7 @@ class AdminController extends Controller
 
     public function edit($id)
     {
+      $alert = \Session::flash('alert', 'Your are about to edit a serie, be careful!');
       $serie = DB::table('series')->where('series.id', $id)
       ->join('series_infos', 'series.id', '=', 'series_infos.serie_id')->first();
         return view('edit')->with('serie', $serie);
@@ -63,9 +64,11 @@ class AdminController extends Controller
 
     public function delete($id)
     {
-        $serie = Serie::find($id);
-        return view('edit')->with('serie', $serie);
-    }
+      $alert = \Session::flash('alert', 'You deleted a record successfully');
+      $serie = Series_info::find($id)->delete();
+      $serie = Serie::find($id)->delete();
+      return \Redirect::route('profile');
+      }
 
     public function refresh($id){
         $p = Serie::find($id);
@@ -73,11 +76,13 @@ class AdminController extends Controller
         $p->Photo = \Input::get('Photo');
         $p->resluggify();
         $p->save();
-        $p = Series_info::find($id);
-        $p->Description = \Input::get('Description');
-        $p->Genre = \Input::get('Genre');
-        $p->Start = \Input::get('Start');
-        $p->Finish = \Input::get('Finish');
+        $s = Series_info::find($id);
+        $s->Description = \Input::get('Description');
+        $s->Genre = \Input::get('Genre');
+        $s->Start = \Input::get('Start');
+        $s->Finish = \Input::get('Finish');
+        $s->save();
+
         return \Redirect::route('profile');
     }
 }
