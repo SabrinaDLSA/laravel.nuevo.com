@@ -22,6 +22,13 @@ Route::get('/music',[
 Route::get('series/{id}/edit','AdminController@edit' );
 Route::get('series/{id}/delete','AdminController@delete' );
 Route::post('series/{id}/refresh', 'AdminController@refresh');
+
+Route::get('/insert', [
+  'as' =>  'insert',
+  'uses' => 'AdminController@insert'
+]);
+
+Route::post('/insert','AdminController@create');
 // User Controllers
 
 Route::get('/logout', [

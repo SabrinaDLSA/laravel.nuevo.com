@@ -10,21 +10,11 @@ use nuevo\Http\Controllers\Controller;
 
 class AdminController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return Response
-     */
     public function index()
     {
         return view('desktop');
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return Response
-     */
     public function series()
     {
       $series = DB::table('series')
@@ -32,23 +22,11 @@ class AdminController extends Controller
         return view('desktop')->with('series', $series);
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  Request  $request
-     * @return Response
-     */
     public function comics(Request $request)
     {
         //
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return Response
-     */
     public function music($id)
     {
         //
@@ -84,5 +62,23 @@ class AdminController extends Controller
         $s->save();
 
         return \Redirect::route('profile');
+    }
+    public function insert()
+    {
+        return view('insert');
+    }
+    public function create()
+    {
+          $p = new Serie;
+          $p->Name = \Input::get('Name');
+          $p->Photo = \Input::get('Photo');
+
+          $p->save();
+          $p->tags = \Input::get('tags');
+          $p->photo = \Input::get('photo');
+
+          $alert = \Session::flash('alert', 'Your new post was created successfully');
+          return \Redirect::route('adminsite')->with('alert', $alert);
+
     }
 }

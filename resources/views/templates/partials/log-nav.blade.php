@@ -23,7 +23,7 @@
             <li><a href="{{route('music')}}">Music</a></li>
             <li><a href="{{route('comics')}}">Comics</a></li>
             <li class="divider"></li>
-            <li><a href="{{route('profile')}}">Insert</a></li>
+            <li><a href="{{route('insert')}}">Insert</a></li>
           </ul>
         </li>
       </ul>
